@@ -4,7 +4,7 @@
   "description": "Pediatric Clinic Website",
   "main": "index.html",
   "scripts": {
-    "dev": "npx serve -l 3000"
+    "dev": "npx serve -l 3001"
   },
   "dependencies": {
     "@isomorphic-git/lightning-fs": "^4.6.2",

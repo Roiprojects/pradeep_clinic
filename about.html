@@ -2,6 +2,7 @@
 <html class="scroll-smooth" lang="en">
 <head>
     <meta charset="utf-8"/>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>About Dr. Pradeep Kumar | Pediatric Excellence Bengaluru</title>
     <link rel="icon" type="image/jpeg" href="assets/images/clinic-mascot-logo.jpg">
@@ -388,48 +389,48 @@
     </section>
 
     <!-- Visit the Clinic Section -->
-    <section id="visit-clinic" class="py-16 md:py-24 px-6 relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 50%, #fdf2f8 100%);">
-        <!-- Subtle Background Decorations -->
-        <div class="absolute top-10 right-10 text-primary opacity-10 pointer-events-none">
-            <span class="material-symbols-outlined text-[100px]">videocam</span>
+    <section id="visit-clinic" class="pt-32 pb-24 px-6 bg-soft-blue-bg/30 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 left-10 text-primary-blue/10 animate-float pointer-events-none">
+            <span class="material-symbols-outlined text-[120px]">cloud</span>
         </div>
-        <div class="absolute bottom-10 left-10 text-pink-300 opacity-10 pointer-events-none">
-            <span class="material-symbols-outlined text-[80px]">play_circle</span>
+        <div class="absolute bottom-20 right-10 text-accent-pink/10 animate-float -delayed pointer-events-none">
+            <span class="material-symbols-outlined text-[100px]">star</span>
         </div>
 
-        <div class="max-w-5xl mx-auto relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-10 md:mb-14">
-                <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-5 py-2 rounded-full border border-blue-50 mb-4 shadow-sm">
-                    <span class="w-2 h-2 bg-primary rounded-full"></span>
-                    <span class="text-[11px] font-bold text-primary uppercase tracking-[0.3em] font-headline">How We Care for You</span>
-                </div>
-                <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl font-bold text-clinic-navy mb-4 leading-tight">
-                    How We <span class="text-primary-blue">Care</span>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <div class="reveal-up">
+                <h2 class="font-headline text-4xl md:text-6xl font-bold text-clinic-navy mb-6 tracking-tight">
+                    Visit the <span class="text-primary-blue">Clinic</span>
                 </h2>
-                <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
-                    Step inside our warm, child-friendly clinic designed for comfort and care.<br class="hidden md:block">
-                    Every visit is a reassuring experience for both parents and little ones.
+                <p class="text-xl text-slate-500 max-w-3xl mx-auto font-medium leading-relaxed mb-16">
+                    A warm, child-friendly space designed for comfort, care, and trust. Take a quick digital tour of our facility.
                 </p>
             </div>
 
             <!-- Video Container -->
-            <div class="relative group">
-                <!-- Decorative Glow Behind Video -->
-                <div class="absolute -inset-4 md:-inset-6 bg-gradient-to-br from-primary-blue/10 to-accent-pink/10 rounded-[2.5rem] md:rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-
-                <!-- Video Wrapper -->
-                <div class="relative bg-white rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(30,136,229,0.12)] border border-white/80 transition-all duration-500 group-hover:shadow-[0_30px_80px_rgba(30,136,229,0.18)]">
-                    <!-- Inner padding frame -->
-                    <div class="p-3 md:p-5">
-                        <div class="relative w-full rounded-[1rem] md:rounded-[2rem] overflow-hidden" style="padding-bottom: 56.25%;">
-                            <div id="about-video-player" class="absolute w-full h-full" style="top: -60px; left: 0; height: calc(100% + 120px);"></div>
-
-                            <!-- Mute/Unmute Toggle Button -->
-                            <button id="about-sound-toggle" onclick="toggleAboutVideoSound()" 
-                                class="absolute bottom-4 right-4 z-30 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-md border border-slate-200 shadow-lg flex items-center justify-center text-slate-600 hover:bg-primary-blue hover:text-white hover:border-primary-blue hover:shadow-xl transition-all duration-300 cursor-pointer"
-                                title="Unmute video">
-                                <span id="about-sound-icon" class="material-symbols-outlined text-2xl">volume_off</span>
+            <div class="reveal-up" style="transition-delay: 0.2s">
+                <div class="relative w-full max-w-5xl mx-auto rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-hospital border-[12px] md:border-[20px] border-white group">
+                    <!-- Video Aspect Ratio Wrapper -->
+                    <div class="aspect-video bg-slate-100 relative">
+                        <video 
+                            id="clinic-video"
+                            class="absolute inset-0 w-full h-full object-cover"
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline>
+                            <source src="assets/videos/clinic-visit.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        <!-- Premium Overlay for Video Controls -->
+                        <div class="absolute bottom-6 right-6 z-20 flex gap-4">
+                            <button id="video-play-pause" class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white hover:bg-white/40 transition-all shadow-lg">
+                                <span id="play-pause-icon" class="material-symbols-outlined">pause</span>
+                            </button>
+                            <button id="video-sound-toggle" class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white hover:bg-white/40 transition-all shadow-lg">
+                                <span id="sound-icon" class="material-symbols-outlined">volume_off</span>
                             </button>
                         </div>
                     </div>
@@ -854,66 +855,45 @@
             });
 
             // Toggle current item
-            item.classList.toggle('active');
         }
     </script>
-
-    <!-- YouTube IFrame API for Video Sound Control -->
+    <!-- Clinic Video Controls Logic -->
     <script>
-        var aboutPlayer;
-        var isAboutVideoMuted = true;
-
-        // Load YouTube IFrame API
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        function onYouTubeIframeAPIReady() {
-            aboutPlayer = new YT.Player('about-video-player', {
-                videoId: '1pyHKLMPvD8',
-                playerVars: {
-                    autoplay: 1,
-                    mute: 1,
-                    controls: 0,
-                    modestbranding: 1,
-                    rel: 0,
-                    showinfo: 0,
-                    iv_load_policy: 3,
-                    disablekb: 1,
-                    loop: 1,
-                    playlist: '1pyHKLMPvD8',
-                    playsinline: 1
-                },
-                events: {
-                    'onReady': function(event) {
-                        event.target.playVideo();
+        const video = document.getElementById('clinic-video');
+        const playPauseBtn = document.getElementById('video-play-pause');
+        const playPauseIcon = document.getElementById('play-pause-icon');
+        const toggleBtn = document.getElementById('video-sound-toggle');
+        const soundIcon = document.getElementById('sound-icon');
+        
+        if (video) {
+            if (playPauseBtn && playPauseIcon) {
+                playPauseBtn.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                        playPauseIcon.innerText = 'pause';
+                        playPauseBtn.classList.remove('bg-primary-blue/40');
+                    } else {
+                        video.pause();
+                        playPauseIcon.innerText = 'play_arrow';
+                        playPauseBtn.classList.add('bg-primary-blue/40');
                     }
-                }
-            });
-        }
-
-        function toggleAboutVideoSound() {
-            if (!aboutPlayer) return;
-            var icon = document.getElementById('about-sound-icon');
-            var btn = document.getElementById('about-sound-toggle');
-            if (isAboutVideoMuted) {
-                aboutPlayer.unMute();
-                aboutPlayer.setVolume(100);
-                icon.textContent = 'volume_up';
-                btn.title = 'Mute video';
-                btn.classList.add('bg-primary-blue', 'text-white', 'border-primary-blue');
-                btn.classList.remove('bg-white/90', 'text-slate-600', 'border-slate-200');
-            } else {
-                aboutPlayer.mute();
-                icon.textContent = 'volume_off';
-                btn.title = 'Unmute video';
-                btn.classList.remove('bg-primary-blue', 'text-white', 'border-primary-blue');
-                btn.classList.add('bg-white/90', 'text-slate-600', 'border-slate-200');
+                });
             }
-            isAboutVideoMuted = !isAboutVideoMuted;
+
+            if (toggleBtn && soundIcon) {
+                toggleBtn.addEventListener('click', () => {
+                    if (video.muted) {
+                        video.muted = false;
+                        soundIcon.innerText = 'volume_up';
+                        toggleBtn.classList.add('bg-primary-blue/40');
+                    } else {
+                        video.muted = true;
+                        soundIcon.innerText = 'volume_off';
+                        toggleBtn.classList.remove('bg-primary-blue/40');
+                    }
+                });
+            }
         }
     </script>
 </body>
 </html>
->
